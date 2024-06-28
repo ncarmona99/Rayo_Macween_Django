@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{%static 'assets/css/estilo.css' %}">
+    <title>Arreglo de frenos - Taller mecánico Rayo Makween</title>
+</head>
+<body>
+  <header>
+    {% include 'RayoMacween/header.html' %}
+  </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+      <!--Titulo de la pagina-->
+      <div class="container-fluid custom-container">
+        <h2>Arreglos de frenos</h2>
+      </div>
+
+      <!-- Container Arreglo Frenos 1-->
+      <div class="arreglo-motor">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 p-0">
+              <img src="https://blog.reparacion-vehiculos.es/hubfs/Im%C3%A1genes_Post/Enero_2016/reparacion_de_frenos.jpg" class="arreglo-motor-img " alt="Image">
+            </div>
+            <div class="col-md-6">
+              <p style="padding-top: 10px;">
+                Juan Pérez notificó que al frenar su vehículo, escuchaba un chirrido persistente y percibía una sensación de pulsación en el pedal de freno.
+                Tras una revisión detallada, se encontró que las pastillas de freno estaban desgastadas de manera irregular y los discos de freno mostraban 
+                signos de deformación. Se procedió a reemplazar las pastillas de freno desgastadas y se rectificaron los discos para restaurar una 
+                superficie de frenado uniforme. Luego de realizar ajustes adicionales, el vehículo fue sometido a pruebas rigurosas 
+                para garantizar un funcionamiento óptimo del sistema de frenos.
+              </p>
+              <!-- Boton modal -->
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-1">
+                Ver detalles
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
+      <!-- Modal -->
+      <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modal-1-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-1-label">Detalles</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                <p>Mecánico: Armando Barrera</p>
+                <p>Fecha: 04 de abril de 2024</p>  
+
+                <p>Detalle del diagnóstico: Tras examinar el vehículo de Juan Pérez, se observó un chirrido al frenar y una pulsación en el pedal
+                    de freno. Se determinó que las pastillas de freno estaban desgastadas de manera irregular y los discos de freno 
+                    presentaban deformaciones.</p>
+
+                  <p>Materiales utilizados:</p>
+
+                  <ul>Pastillas de freno nuevas.</ul>
+                  <ul>Discos de freno de repuesto.</ul>
+                  <ul>Herramientas de extracción e instalación.</ul>
+                  <ul>Rectificador de discos de frenox.</ul>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Container Arreglo Frenos 2-->
+      <div class="arreglo-motor" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 p-0">
+              <img src="https://cosmefrenos.cl/wp-content/uploads/2018/03/noborrarfrenos.gif" class="arreglo-motor-img" alt="Image">
+            </div>
+            <div class="col-md-6">
+              <p style="padding-top: 10px;">
+                Ana García reportó que su vehículo presentaba un chirrido agudo al frenar y una sensación de vibración en el pedal del freno. 
+                Después de una inspección, determinamos que las pastillas de freno estaban desgastadas y los discos de freno presentaban irregularidades.
+                Reemplazamos las pastillas de freno desgastadas y rectificamos los discos para restaurar la superficie de frenado.
+                El vehículo fue sometido a pruebas para verificar el funcionamiento adecuado del sistema de frenos.</p>
+              <!-- Boton modal -->
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-2">
+                Ver detalles
+              </button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <!-- Modal 2-->
+        <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modal-2-label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-2-label">Detalles</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <p>Mecánico: Armando Barrera</p>
+                  <p>Fecha: 05 de abril de 2024</p>  
+  
+                  <p>Detalle del diagnóstico: Tras inspeccionar el vehículo de Ana García, se encontró que las pastillas de freno estaban desgastadas y los discos de freno presentaban irregularidades, lo que causaba un chirrido al frenar y vibraciones en el pedal.
+                  </p>
+  
+                    <p>Materiales utilizados:</p>
+  
+                    <ul>Pastillas de freno nuevas.</ul>
+                    <ul>Herramientas de extracción e instalación..</ul>
+                    <ul>Rectificador de discos de freno.</ul>
+                    <ul>Líquido de frenos de calidad.</ul>
+                    <ul>Equipo de seguridad personal.</ul>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+  <footer>
+    {% include 'RayoMacween/footer.html' %}
+  </footer>
+  <script src = "{%static 'assets/js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{%static 'assets/css/estilo.css' %}">
+    <title>Arreglo de motor - Taller mecánico Rayo Makween</title>
+</head>
+<body>
+  <header>
+    {% include 'RayoMacween/header.html' %}
+  </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <div class="container-fluid custom-container">
+        <h2>Arreglos de motor</h2>
+      </div>
+
+      <!-- Container Arreglo Motor 1-->
+      <div class="arreglo-motor">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 p-0">
+              <img src="https://www.actualidadmotor.com/wp-content/uploads/2021/02/cilindros.jpg" class="arreglo-motor-img " alt="Image">
+            </div>
+            <div class="col-md-6">
+              <p style="padding: 10px;">
+                Un cliente acudió con un problema de sobrecalentamiento en su motor. Tras un diagnóstico detallado, descubrimos que la causa principal era una obstrucción en el radiador, impidiendo el flujo adecuado del líquido refrigerante. Procedimos con la reparación, incluyendo limpieza del radiador, inspección de termostato y bomba de agua, y corrección del nivel de líquido refrigerante. Finalmente, realizamos pruebas exhaustivas para garantizar el óptimo funcionamiento del motor y la satisfacción del cliente.
+              </p>
+              <!-- Boton modal -->
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-1" style="margin-bottom: 20px;">
+                Ver detalles
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
+      <!-- Modal -->
+      <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modal-1-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-1-label">Detalles</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                <p>Mecánico: Armando Barrera</p>
+                <p>Fecha: 10 de abril de 2024</p>  
+
+                <p>Detalle del diagnóstico: Tras una inspección meticulosa del vehículo, 
+                  se encontró que el radiador estaba obstruido, lo que provocaba un flujo 
+                  insuficiente de líquido refrigerante y causaba el sobrecalentamiento del motor.</p>
+
+                  <p>Materiales utilizados:</p>
+
+                  <ul>Limpiador de radiador.</ul>
+                  <ul>Herramientas de limpieza especializadas.</ul>
+                  <ul>Líquido refrigerante de calidad.</ul>
+                  <ul>Termostato de repuesto (en caso necesario).</ul>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Container Arreglo Motor 2-->
+      <div class="arreglo-motor" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 p-0">
+              <img src="https://espaciocoches.com/wp-content/uploads/2020/10/averias-en-el-sistema-de-lubricacion-causas-y-soluciones-portada.jpg" class="arreglo-motor-img" alt="Image">
+            </div>
+            <div class="col-md-6">
+              <p style="padding-top: 10px;">
+                Un cliente acudió con un problema de sobrecalentamiento en su motor. Tras un diagnóstico detallado, descubrimos que la causa principal era una obstrucción en el radiador, impidiendo el flujo adecuado del líquido refrigerante. 
+                Procedimos con la reparación, incluyendo limpieza del radiador, inspección de termostato y bomba de agua, y corrección del nivel de líquido refrigerante. 
+                Finalmente, realizamos pruebas exhaustivas para garantizar el óptimo funcionamiento del motor y la satisfacción del cliente.</p>
+              <!-- Boton modal -->
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-2">
+                Ver detalles
+              </button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <!-- Modal 2-->
+        <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modal-2-label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-2-label">Detalles</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <p>Mecánico: Armando Barrera</p>
+                  <p>Fecha: 10 de abril de 2024</p>  
+  
+                  <p>Detalle del diagnóstico: Tras una inspección meticulosa del vehículo, 
+                    se encontró que el radiador estaba obstruido, lo que provocaba un flujo 
+                    insuficiente de líquido refrigerante y causaba el sobrecalentamiento del motor.</p>
+  
+                    <p>Materiales utilizados:</p>
+  
+                    <ul>Limpiador de radiador.</ul>
+                    <ul>Herramientas de limpieza especializadas.</ul>
+                    <ul>Líquido refrigerante de calidad.</ul>
+                    <ul>Termostato de repuesto (en caso necesario).</ul>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+  <footer>
+    {% include 'RayoMacween/footer.html' %}
+  </footer>
+  <script src = "{%static 'assets/js/script.js' %}"></script>
+</body>
+</html>

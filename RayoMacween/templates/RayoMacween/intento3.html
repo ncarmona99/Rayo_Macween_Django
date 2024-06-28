@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autito que arranca</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="autito" onmouseover="arrancar()" onmouseout="detener()">
+        <img src="imagenes-autito/autito logo.png" alt="Autito">
+    </div>
+
+    <script>
+    function arrancar() {
+        document.getElementById('autito').classList.add('moving');
+    }
+    
+    function detener() {
+        document.getElementById('autito').classList.remove('moving');
+    }</script>
+
+    
+</body>
+</html>

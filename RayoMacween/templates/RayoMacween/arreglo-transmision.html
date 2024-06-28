@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{%static 'assets/css/estilo.css' %}">
+    <title>Arreglo de transmisión - Taller mecánico Rayo Makween</title>
+</head>
+<body>
+    <header>
+      {% include 'RayoMacween/header.html' %}
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <div class="container-fluid custom-container">
+        <h2>Arreglos de transmisión</h2>
+      </div>
+
+      <!-- Container Arreglo Transmision 1-->
+      <div class="arreglo-motor">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 p-0">
+              <img src="https://images.squarespace-cdn.com/content/v1/5f3d811a87c910269f568b29/1605046381981-MEJM9JA3JL4ZCUE675NZ/caja+4+%281%29.jpeg" class="arreglo-motor-img " alt="Image">
+            </div>
+            <div class="col-md-6">
+              <p style="padding-top: 10px;">
+                Un cliente llegó con su vehículo debido a problemas de deslizamiento de la transmisión y dificultades para cambiar de marcha. 
+                Después de diagnosticar deslizamiento de la transmisión y problemas para cambiar de marcha debido a un desgaste excesivo en los disco
+                 de embrague y componentes del convertidor de par, se realizó una reparación completa. Esto incluyó el reemplazo de los discos de 
+                 embrague y componentes del convertidor de par desgastados, ajustes y pruebas minuciosas para garantizar un funcionamiento óptimo.
+                  Finalmente, se realizaron pruebas exhaustivas para asegurar que la transmisión funcionara correctamente, 
+                  dejando al cliente con la confianza de que su vehículo estaba en excelentes condiciones.
+              </p>
+              <!-- Boton modal -->
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-1" style="margin-bottom: 20px;">
+                Ver detalles
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
+      <!-- Modal -->
+      <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modal-1-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-1-label">Detalles</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                <p>Mecánico: Benito Espinoza</p>
+                <p>Fecha: 06 de abril de 2024</p>  
+
+                <p>Detalle del diagnóstico: Después de una inspección detallada del vehículo, se identificó un problema de deslizamiento de la transmisión 
+                    y dificultades para cambiar de marcha. Tras un análisis minucioso, 
+                    se determinó que la causa principal era un desgaste excesivo en los discos de embrague y los componentes del convertidor de par..</p>
+
+                  <p>Materiales utilizados:</p>
+
+                  <ul>Discos de embrague nuevos.</ul>
+                  <ul>Componentes del convertidor de par de reemplazo.</ul>
+                  <ul>Aceite de transmisión de calidad.</ul>
+                  <ul>Herramientas de extracción y ajuste.</ul>
+                  <ul>Equipo de diagnóstico de transmisión.</ul>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Container Arreglo Transmision 2-->
+      <div class="arreglo-motor" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 p-0">
+              <img src="https://www.expertoautorecambios.es/magazine/wp-content/uploads/2022/01/Vibrationen-am-Auto-8.jpg" class="arreglo-motor-img" alt="Image">
+            </div>
+            <div class="col-md-6">
+              <p style="padding-top: 10px;">
+                Un cliente llegó con su vehículo debido a problemas de vibración y dificultades para cambiar de marcha. 
+                Tras un diagnóstico exhaustivo, se identificó un desgaste en los cojinetes del eje de transmisión y un desequilibrio 
+                en el volante de inercia como causas principales. Para solucionarlo, se retiró la transmisión y se reemplazaron los cojinetes
+                desgastados y se balanceó el volante de inercia. También se inspeccionaron y ajustaron otros componentes como el embrague y
+                los engranajes para garantizar un funcionamiento óptimo.
+              </p>
+              <!-- Boton modal -->
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-2" style="margin-bottom: 20px;">
+                Ver detalles
+              </button>   
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <!-- Modal 2-->
+        <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modal-2-label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-2-label">Detalles</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <p>Mecánico: Benito Espinoza</p>
+                  <p>Fecha: 11 de abril de 2024</p>  
+  
+                  <p>Detalle del diagnóstico: Tras una exhaustiva evaluación, se encontró que el vehículo presentaba vibraciones y dificultades para cambiar 
+                    de marcha debido al desgaste de los cojinetes del eje de transmisión y a un desequilibrio en el volante de inercia.</p>
+  
+                    <p>Materiales utilizados:</p>
+  
+                    <ul>Cojinetes del eje de transmisión nuevos.</ul>
+                    <ul>Volante de inercia balanceado.</ul>
+                    <ul>Aceite de transmisión de calidad.</ul>
+                    <ul>Equipo de diagnóstico de transmisión.</ul>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+  <footer>
+    {% include 'RayoMacween/footer.html' %}
+  </footer>
+  <script src = "{%static 'assets/js/script.js' %}"></script>
+</body>
+</html>

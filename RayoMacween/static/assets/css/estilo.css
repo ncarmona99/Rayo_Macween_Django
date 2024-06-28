@@ -1,0 +1,182 @@
+/* Map container styles */
+.map-container {
+  position: relative;
+  margin-top: 100px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e73d3d;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1; 
+  width: 450px;
+  height: 400px;
+}
+
+.map-container .map {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 300px;
+  margin-top: 15px;
+}
+
+
+body {
+    background-image: url("https://media.istockphoto.com/id/1176654815/vector/car-service-seamless-pattern-with-thin-line-icons.jpg?s=612x612&w=0&k=20&c=UwuQ3KgfvIFnR6pcUZrDYWNPJPsF6bguULwOT0nKeYA=");
+    
+}
+
+.carousel-caption{
+    color:white;
+    background-color:rgba(128, 128, 128, 0.774);
+    border-radius: 10px ;
+    width: 30vw;
+    margin: auto;
+}
+
+.card-img-top{
+    width:100%;
+    height:20vw;
+    object-fit:cover;
+}
+.card-text{
+    font-family:Arial
+}
+
+.ultimas-reparaciones{
+  max-width: 100%;
+}
+
+.carousel-item{
+    height:40vw;
+}
+
+.carousel-item img{
+    height:auto;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    margin: 0 auto;
+}
+
+.custom-container{
+    text-align: center;
+    background-color: #e73d3d;
+    border-radius: 20px;
+    width: 400px; 
+    height: 45px; 
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  
+  .custom-card-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+  }
+  
+  .custom-card {
+    height: 100%;
+    box-shadow: 6px 6px rgba(61, 0, 0, 0.479);
+  }
+  
+  .custom-card .card-title,
+  .custom-card .card-text {
+    text-align: center;
+  }
+  
+  .arreglo-motor {
+    background-color: #e73d3d;
+    border: 1px solid black; 
+    width: 80%; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .arreglo-motor-img {
+    width: 100%;
+    height: 100%;
+  }
+
+.btn{
+    background-color: #9e1212;
+    border-color:black;
+    color: white;
+}
+
+.form-label{
+    color:rgb(160, 160, 160);
+    font-style: oblique;
+}
+
+.modal-header {
+  background-color: black;
+  color: white;
+  border-bottom: none;
+  padding-bottom: 15px; 
+}
+
+.modal-body {
+  background-color: #e73d3d;
+}
+
+.modal-footer {
+  background-color: black;
+  color: white; 
+  border-top: none;
+}
+
+.pista{
+  padding-top: 40px;
+  padding-left: 40px;
+
+}
+img#coche {
+  position: absolute;
+}
+#autito {
+  position: relative;
+  width: 100px;
+  height: auto;
+}
+
+#autito img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s ease;
+}
+
+#autito.moving img {
+  transform: translateX(900px);
+}
+
+footer{
+  position: absolute;
+  background-color: #5a0e0e;
+  width:100%;
+}
+
+.titulo-form{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+    
+}
+.navbar-toggler{
+  border-color:#ffffff00;
+}
+
+.mensaje-error{
+  color:red;
+  font-size: 18px;
+}

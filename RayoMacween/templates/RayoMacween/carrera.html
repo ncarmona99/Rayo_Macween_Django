@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Carrera</title>
+    <style>
+       .body {
+           padding-top: 40px;
+           padding-left: 40px;
+       }
+
+       img#coche1 {
+          position: absolute;
+       }
+
+       
+
+      .zona_boton {
+        text-align: center;
+        width: 100%;
+        margin-top: 240px;
+      }
+
+   </style>
+</head>
+<body>
+    <div class="body">
+      <img id="coche" src="imagenes-autito/autito.jpeg" alt="Este es mi coche">
+			
+	<div class="zona_boton">
+		<input id="coche1" type="image" src="imagenes-autito/autito logo.png" onclick='setInterval("correr()",60)' value="A CORRER!">	
+	</div>
+    </div>
+    <script>	  
+      //seleccionar imágenes
+      var coche1 = document.getElementById("coche1");
+      
+
+      //posiciones iniciales
+      var x_coche1 = 0;
+      
+
+      function correr() {
+      	   //movimiento coche1
+	   if (x_coche1 <= 85 && x_coche1 >= 0) { //condición para que se mueva entre estos valores de la pantalla
+		x_coche1 = x_coche1 + 2; //movimiento del valor x
+		coche1.style.left = x_coche1 + "%"; //aplicar el valor obtenido al left del elemento
+	    }
+	    else { //si no cumple la condición, es decir, se sale de los valores de la pantalla, vuelve a empezar
+		 x_coche1=0; //posicion inicial
+		 coche1.style.left = x_coche1 + "%"; //volvemos a aplicar el valor obtenido al left del elemento
+	    }
+
+	    
+      }
+  </script>
+</body>
+</html>
