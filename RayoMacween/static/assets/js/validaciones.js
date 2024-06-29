@@ -1,17 +1,12 @@
-const rut = document.getElementById('rut');
-const nombre = document.getElementById("nombre");
-const appaterno = document.getElementById("appaterno");
-const apmaterno = document.getElementById("apmaterno");
-const edad = document.getElementById("edad");
-const genero = document.getElementById("genero");
-const celular = document.getElementById("celular");
-const carta = document.getElementById("carta");
-
-function validar(){
-  if(rut.value.length > 10 || rut.value.length < 8 || rut.value.includes('-') == false || /[a-z]/i.test(rut.value) == true){
-    alert('rut inválido, debe estar escribir en formato 99999999-9');
-    console.log("No se respeta length de rut");
-  }
+/*const form = document.querySelector("form");
+var opcion = document.getElementById("id_id_genero");
+var value = opcion.value;
+if(value == 4){
+  document.getElementById("btn-submit").addEventListener("click", function (event) {
+    event.preventDefault();
+    alert('Debe elegir su género');
+  });
+}
 
   if(nombre.value.length > 50){
     alert('El nombre no puede superar 50 caracteres');
@@ -44,4 +39,4 @@ function validar(){
   if(rut.value.trim() === '' || nombre.value.trim() === '' || appaterno.value.trim() === '' || apmaterno.value.trim() === '' || edad.value.trim() === '' || celular.value.trim() === '' || carta.value.trim() === ''){
     alert('ERROR: Ningún campo puede quedar vacío')
   }
-}
+    */
