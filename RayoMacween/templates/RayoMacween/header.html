@@ -23,13 +23,25 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorías
-            </a>
+            </a>  
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/arreglos-motor">Arreglos de motor</a></li>
               <li><a class="dropdown-item" href="/arreglo-transmision">Arreglos de transmisión</a></li>
               <li><a class="dropdown-item" href="/arreglo-frenos">Arreglos de frenos</a></li>
             </ul>
           </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a>
+          </li> 
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Crear cuenta</a>
+          </li>
+          {% endif %}
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
