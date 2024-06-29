@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Producto
+
 
 # Create your views here.
 
@@ -27,3 +29,6 @@ def arreglo_transmision(request):
     context={}
     return render(request,'RayoMacween/arreglo-transmision.html',context)
 
+def tienda(request):
+    productos = Producto.objects.all()
+    return render(request,'RayoMacween/tienda.html',{'productos':productos})
