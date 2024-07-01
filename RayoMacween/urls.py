@@ -1,7 +1,5 @@
 from django.urls import path
 from . import views
-from django.contrib.auth import authenticate, login, logout
-from django.contrib import messages
 
 
 urlpatterns = [
@@ -14,5 +12,6 @@ urlpatterns = [
     path('tienda/', views.tienda, name='tienda'),
     path('login/', views.login_user, name='login'),
     path('logout/', views.logout_user, name='logout'),
-    path('register/', views.register_user, name='register')
+    path('register/', views.register_user, name='register'),
+    path('categoria/<str:foo>', views.categoria, name='categoria')
 ]

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Producto
+from .models import Producto, Categoria
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -77,3 +77,12 @@ def register_user(request):
     else:
         return render(request,'RayoMacween/registrarse.html', {'form': form})
 
+def categoria(request, foo):
+    print(f"Buscando la categoría: {foo}")
+    try:
+        categoria = Categoria.objects.get(nombre=foo)
+        productos = Producto.objects.filter(categoria=categoria)
+        return render(request, 'RayoMacween/categoria.html', {'productos':productos, 'categoria':categoria})
+    except:
+        messages.success(request, ("No existe esa categoría."))
+        return redirect('principal')
