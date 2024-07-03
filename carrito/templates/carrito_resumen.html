@@ -19,7 +19,7 @@
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
-  <div class="container-fluid custom-container">
+  <div class="container-fluid custom-container" style="background-color: #e73d3d;">
     <h2>Carrito de compras</h2>
     <h3>Total del Carrito: <span id="total-carrito">$0</span></h3>
   </div>
@@ -58,7 +58,7 @@
             var cantidad = divProducto.find('.cantidad-producto').val();
 
             $.ajax({
-                url: '{% url 'carrito_update' %}',
+                url: '{% url "carrito_update" %}',
                 type: 'POST',
                 data: {
                     producto_id: productoId,
@@ -82,7 +82,7 @@
             var productoId = divProducto.data('producto-id');
 
             $.ajax({
-                url: '{% url 'carrito_delete' %}',
+                url: '{% url "carrito_delete" %}',
                 type: 'POST',
                 data: {
                     producto_id: productoId,

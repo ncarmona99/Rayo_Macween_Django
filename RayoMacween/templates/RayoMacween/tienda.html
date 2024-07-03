@@ -53,7 +53,7 @@
           var productoId = $(this).val(); 
           $.ajax({
               type: 'POST',
-              url: '{% url 'carrito_add' %}',
+              url: '{% url "carrito_add" %}',
               data: {
                 producto_id: productoId,
                 csrfmiddlewaretoken: '{{ csrf_token }}',
