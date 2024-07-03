@@ -25,6 +25,9 @@
 
 body {
     background-image: url("https://media.istockphoto.com/id/1176654815/vector/car-service-seamless-pattern-with-thin-line-icons.jpg?s=612x612&w=0&k=20&c=UwuQ3KgfvIFnR6pcUZrDYWNPJPsF6bguULwOT0nKeYA=");
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -159,12 +162,6 @@ img#coche {
   transform: translateX(900px);
 }
 
-footer{
-  position: absolute;
-  background-color: #5a0e0e;
-  width:100%;
-}
-
 .titulo-form{
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -179,4 +176,9 @@ footer{
 .mensaje-error{
   color:red;
   font-size: 18px;
+}
+
+footer{
+  background-color: #5a0e0e;
+  margin-top: auto;
 }

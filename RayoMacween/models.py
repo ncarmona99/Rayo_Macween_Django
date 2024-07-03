@@ -8,12 +8,16 @@ class Genero(models.Model):
         return str(self.genero)
 
 class Formulario(models.Model):
-    rut = models.CharField(primary_key=True, max_length=10)
+
+    def get_default_genero():
+        return Genero.objects.get_or_create(genero="Selecione su género")[0]
+
+    rut = models.CharField(max_length=10)
     nombre = models.CharField(max_length=20)
     appaterno = models.CharField(max_length=20)
     apmaterno = models.CharField(max_length=20)
     edad = models.IntegerField()
-    id_genero = models.ForeignKey('Genero',on_delete=models.CASCADE, db_column='idGenero')
+    id_genero = models.ForeignKey('Genero',default=get_default_genero,on_delete=models.CASCADE, db_column='idGenero')
     celular = models.CharField(max_length = 45)
     descripcion = models.CharField(max_length = 500)
 
