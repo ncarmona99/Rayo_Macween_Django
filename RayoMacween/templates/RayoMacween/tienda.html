@@ -36,7 +36,8 @@
                             <p class="card-text">{{ producto.description }}</p>
                             <p class="card-text">${{ producto.precio }}</p>
 
-                            <button class="btn btn-secondary" value="{{ producto.id }}" id="add-carrito">Añadir al carrito</button>
+                            <button class="btn btn-secondary add-carrito" value="{{ producto.id }}">Añadir al carrito</button>
+
                         </div>
                     </div>
                 </div>
@@ -45,29 +46,33 @@
     </div>
     <br><br><br>
     
-<script>
-  // Check if button pressed
-  $(document).on('click', '#add-carrito', function(e){
-      e.preventDefault();
-      $.ajax({
-          type: 'POST',
-          url: '{% url 'carrito_add' %}',
-          data: {
-      producto_id: $('#add-carrito').val(),
-      csrfmiddlewaretoken: '{{ csrf_token }}',
-      action: 'post'
-          },
-  
-          success: function(json){
-              console.log(json)
-          },
-  
-          error: function(xhr, errmsg, err){
-  
-          }
-      });  
-  })
+    <script>
+      
+      $(document).on('click', '.add-carrito', function(e){
+          e.preventDefault();
+          var productoId = $(this).val(); 
+          $.ajax({
+              type: 'POST',
+              url: '{% url 'carrito_add' %}',
+              data: {
+                producto_id: productoId,
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+              },
+      
+              success: function(json){
+                  console.log(json);
+              },
+      
+              error: function(xhr, errmsg, err){
+                  console.log("Error: " + errmsg);
+              }
+          });  
+      })
+
   </script>  
+
+    
   <footer>
     {% include 'RayoMacween/footer.html' %}
   </footer>
