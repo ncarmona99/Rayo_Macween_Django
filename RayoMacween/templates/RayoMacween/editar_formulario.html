@@ -19,30 +19,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
     <div class="container mt-4">
-        <h2>Editar Salsa</h2>
+        <div class="container" style="background-color: rgba(160, 160, 160, 0.925); border-radius: 10px; text-align: center; margin-top: 20px; margin-bottom: 20px; max-width: 300px;">
+            <h1>Editar Solicitud</h1>
+        </div>
         <form method="post">
             {% csrf_token %}
-           {{ form.non_field_errors }} 
-            <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción</label>
-                {{ form.descripcion }}
-                {% for error in form.descripcion.errors %}
-                    <div class="invalid-feedback d-block">
-                        {{ error }}
-                    </div>
-                {% endfor %}
+           {{ form.non_field_errors }}
+           <div class="container" style="background-color: rgba(58, 58, 58, 0.925); border-radius: 10px; text-align: center; padding-top: 25px; padding-left: 50px; padding-right: 50px; max-width: 500px;">
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Descripción</label>
+                    {{ form.descripcion }}
+                    {% for error in form.descripcion.errors %}
+                        <div class="invalid-feedback d-block">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    <label for="celular" class="form-label">Celular</label>
+                    {{ form.celular }}
+                    {% for error in form.celular.errors %}
+                        <div class="invalid-feedback d-block">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-bottom: 25px;">Actualizar</button>
+                <a href="{% url 'lista_formularios' %}" class="btn btn-secondary" style="margin-bottom: 25px;">Cancelar</a>
             </div>
-            <div class="mb-3">
-                <label for="celular" class="form-label">Celular</label>
-                {{ form.celular }}
-                {% for error in form.celular.errors %}
-                    <div class="invalid-feedback d-block">
-                        {{ error }}
-                    </div>
-                {% endfor %}
-            </div>
-            <button type="submit" class="btn btn-primary">Actualizar</button>
-            <a href="{% url 'lista_formularios' %}" class="btn btn-secondary">Cancelar</a>
         </form>
     </div>
     <footer>

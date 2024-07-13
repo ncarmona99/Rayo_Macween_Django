@@ -182,3 +182,13 @@ footer{
   background-color: #5a0e0e;
   margin-top: auto;
 }
+
+.fondo_formularios{
+  background-color: rgba(58, 58, 58, 0.925);
+  border-radius: 10px; 
+  text-align: center; 
+  padding-top: 25px; 
+  padding-left: 50px; 
+  padding-right: 50px; 
+  margin-bottom: 25px;
+}

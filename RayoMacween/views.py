@@ -11,6 +11,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, DeleteView
+from .forms import CustomLogin
+from .forms import myUserCreationForm
 
 
 def principal(request):
@@ -35,13 +37,13 @@ def arreglo_transmision(request):
 
 def registrarse(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = myUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)  
             return redirect('principal')  
     else:
-        form = UserCreationForm()
+        form = myUserCreationForm()
     return render(request, 'RayoMacween/registrarse.html', {'form': form})
 
 @login_required  
@@ -64,6 +66,7 @@ def contacto(request):
 class CustomLoginView(LoginView):
     
     template_name = 'RayoMacween/login.html'
+    form_class = CustomLogin
 
     def get(self, request, *args, **kwargs):
         next_url = request.GET.get('next', '')
@@ -108,4 +111,4 @@ def cambiar_estado_formulario(request, pk):
         formulario.estado = nuevo_estado
         formulario.save()
         return redirect('lista_formularios')
-    return redirect('lista_formularios')    
+    return redirect('lista_formularios') 

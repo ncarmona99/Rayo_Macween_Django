@@ -2,6 +2,9 @@ from django import forms
 from django.core.exceptions import ValidationError
 from .models import Formulario
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 class FormularioForm(forms.ModelForm):
     class Meta:
@@ -67,8 +70,56 @@ class EditarFormularioForm(forms.ModelForm):
     class Meta:
         model = Formulario
         fields = ['descripcion', 'celular']
+        widgets = {
+            'celular': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Celular'}),
+            'descripcion': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'placeholder': 'Describa el problema'}),
+        }
 
     def clean_descripcion(self):
         descripcion = self.cleaned_data.get('descripcion')
         return descripcion
-    
+
+class CustomLogin(AuthenticationForm):
+    username = forms.CharField(label='',
+                                widget=forms.TextInput(
+                                    attrs = {
+                                       'placeholder': 'Nombre de usuario',
+                                       }
+                               ))
+
+    password = forms.CharField(label='', 
+                                widget=forms.PasswordInput(
+                                    attrs = {
+                                        'placeholder': 'Contraseña'
+                                    }
+                                ))
+
+class myUserCreationForm(UserCreationForm):
+
+    password1 = forms.CharField(
+    label="Contraseña",
+    strip=False,
+    widget=forms.PasswordInput
+)
+    password2 = forms.CharField(
+    label="Confirme contraseña",
+    strip=False,
+    widget=forms.PasswordInput
+)
+
+    class Meta:
+        model=User
+        fields = ('username', 'password1', 'password2')
+        labels = {
+            "username": "Nombre de usuario"
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(myUserCreationForm, self).__init__(*args, **kwargs)
+
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None
+
+        self.fields['username'].widget.attrs['class'] = 'form-control'
+        self.fields['password1'].widget.attrs['class'] = 'form-control'
+        self.fields['password2'].widget.attrs['class'] = 'form-control'
